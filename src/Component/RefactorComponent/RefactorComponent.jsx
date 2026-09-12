@@ -1,6 +1,7 @@
 import { useState } from "react";
 function RefactorComponent({children}){
 const [x,Setx]=useState(0);//belong to counter
+console.log("Called");
 return(
     <>
     <button onClick={()=>{Setx(x+1)}}>
