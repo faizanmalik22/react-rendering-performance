@@ -9,8 +9,9 @@ function WaitingforSomething(ms){
     }
 }
 
-export default function SlowComponent(){
+export default function SlowComponent({time,custom}){ 
 
-    WaitingforSomething(5000);//wait for 5 sec than return the UI from below
+    WaitingforSomething(time);//wait for 5 sec than return the UI from below
+    custom();
     return (<div>Slow component</div>);//like nothing render 
 }
